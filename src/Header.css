@@ -1,0 +1,35 @@
+.header {
+    background: red;
+    min-height: 200px;
+}
+
+.header-wrapper {
+    max-width: 90%;
+    background: green;
+    height: 200px;
+    margin: 0 auto;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+}
+
+.logo {
+    width: 200px;
+    padding: 50px;
+}
+
+.menu-links {
+    text-decoration: none;
+    list-style: none;
+    align-self: center;
+    display: flex;
+}
+
+.menu-links li{
+    padding: 20px;
+    font-size: 32px;
+}

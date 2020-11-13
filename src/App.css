@@ -10,11 +10,6 @@ body {
   position:relative;
 }
 
-.header {
-  background: red;
-  min-height: 200px;
-}
-
 .body {
   background: blue;
   min-height: 600px;
