@@ -1,8 +1,31 @@
+import Adapter from 'enzyme-adapter-react-16'
+import Enzyme from 'enzyme'
+Enzyme.configure({ adapter: new Adapter() })
 import { render, screen } from '@testing-library/react';
+import { mount } from 'enzyme';
 import App from './App';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const renderedApp = mount(<App />);
+  const app = renderedApp.find('.App');
+  expect(app.length).toBe(1);
+});
+
+test('renders the header', () => {
+  const renderedApp = mount(<App />);
+  const header = renderedApp.find('.header');
+  expect(header.length).toBe(1);
+});
+
+test('renders the body', () => {
+  const renderedApp = mount(<App />);
+  const body = renderedApp.find('.body');
+  expect(body.length).toBe(1);
+});
+
+
+test('renders the footer', () => {
+  const renderedApp = mount(<App />);
+  const footer = renderedApp.find('.footer');
+  expect(footer.length).toBe(1);
 });
