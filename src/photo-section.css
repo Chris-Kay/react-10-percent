@@ -1,0 +1,11 @@
+.homepage-photos {
+    display: flex;
+  }
+  
+  .homepage-photos-image {
+    padding: 30px;
+  }
+  
+  .homepage-photos-image img {
+    width: 100%
+  }

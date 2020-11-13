@@ -1,23 +1,40 @@
 import './Header.css'
-import logo from './generic-logo.jpg'
 import headerConfig from './config/header.json';
 
+const clickNav = () => {
+    var nav = document.getElementById("myTopnav");
+    if (nav.className === "topnav") {
+        nav.className += " responsive";
+    } else {
+        nav.className = "topnav";
+    }
+  }
+
 const getNavItems = () => {
-    return (<ul className="menu-links">{headerConfig.map(listItem => 
-        <li key={listItem.linkName}>{listItem.linkName}</li>)}
-    </ul>)
-}
+    return (
+        <div>
+            <a href="#home" className="active">Home</a>
+            {headerConfig.map(listItem =>
+                <a className='menu-items' key={listItem.linkName}>{listItem.linkName}</a>)
+            }
+            <a className="icon" onClick={clickNav}>
+                <i className="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </i>
+            </a>
+        </div>
+    )}
+
+
 
 const Header = () => {
   return (
-    <header className="header">
-        <div className="header-wrapper">
-            <div className="header-content">
-                <img className="logo" src={logo} alt="logo" />
-                    {getNavItems()}
-            </div>
-        </div>
-    </header>
+    <header className="topnav" id="myTopnav">
+    {getNavItems()}
+  </header>
+  
   );
 }
 

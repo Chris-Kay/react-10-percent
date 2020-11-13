@@ -13,13 +13,13 @@ test('renders learn react link', () => {
 
 test('renders the header', () => {
   const renderedApp = mount(<App />);
-  const header = renderedApp.find('.header');
+  const header = renderedApp.find('.topnav');
   expect(header.length).toBe(1);
 });
 
 test('renders the body', () => {
   const renderedApp = mount(<App />);
-  const body = renderedApp.find('.body');
+  const body = renderedApp.find('.main');
   expect(body.length).toBe(1);
 });
 
